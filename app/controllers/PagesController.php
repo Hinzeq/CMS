@@ -1,8 +1,5 @@
 <?php
 
-namespace App\Controllers;
-use App\Models\PagesModel;
-
 class PagesController {
 
     public function render($name) {

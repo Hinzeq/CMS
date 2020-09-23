@@ -1,8 +1,5 @@
 <?php
 
-use App\Core\App;
-use App\Core\Database\{Connection, QueryBuilder};
-
 $QueryBuilder = new QueryBuilder(App::get('db_connect'));
 $query = $QueryBuilder->selectAll('pages');
 

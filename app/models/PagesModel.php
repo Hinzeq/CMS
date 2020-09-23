@@ -1,9 +1,5 @@
 <?php
 
-namespace App\Models;
-use App\Core\App;
-use App\Core\Database\{Connection, QueryBuilder};
-
 class PagesModel {
 
     // public static function query() {
