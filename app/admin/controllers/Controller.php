@@ -6,11 +6,6 @@ class Controller {
 
         session_start();
 
-        // if($_SERVER['REQUEST_URI'] == '/admin/login') {
-        //     $_SESSION['login'] = false;
-        //     return 'app/admin/views/login.php';
-        // }
-
         if(isset($_SESSION['login']) && $_SESSION['login'] == true) {
             return $page;
         }

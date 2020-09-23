@@ -47,7 +47,7 @@ class Router {
 
         if ($controller == 'IndexController') return new IndexController;
         else if ($controller == 'AddController') return new AddController;
-
+        else if ($controller == 'LogoutController') return new LogoutController;
     }
 
 }

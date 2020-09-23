@@ -2,5 +2,6 @@
 
 return [
     'admin' => 'IndexController',
-    'admin/add' => 'AddController'
+    'admin/add' => 'AddController',
+    'admin/logout' => 'LogoutController'
 ];

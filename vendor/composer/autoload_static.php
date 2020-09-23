@@ -15,6 +15,7 @@ class ComposerStaticInitfa46eba691a72d70c3d758c4e875b81e
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'Controller' => __DIR__ . '/../..' . '/app/admin/controllers/Controller.php',
         'IndexController' => __DIR__ . '/../..' . '/app/admin/controllers/IndexController.php',
+        'LogoutController' => __DIR__ . '/../..' . '/app/admin/controllers/LogoutController.php',
         'PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'PagesModel' => __DIR__ . '/../..' . '/app/models/PagesModel.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
