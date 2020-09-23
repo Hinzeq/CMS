@@ -14,7 +14,6 @@ return array(
     'Connection' => $baseDir . '/core/database/Connection.php',
     'Controller' => $baseDir . '/app/admin/controllers/Controller.php',
     'IndexController' => $baseDir . '/app/admin/controllers/IndexController.php',
-    'LogoutController' => $baseDir . '/app/admin/controllers/LogoutController.php',
     'PagesController' => $baseDir . '/app/controllers/PagesController.php',
     'PagesModel' => $baseDir . '/app/models/PagesModel.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
