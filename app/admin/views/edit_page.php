@@ -1,3 +1,3 @@
 <?php require('partials/header.php'); ?>
 
-<h1>Add page</h1>
+<h1>Edit page</h1>

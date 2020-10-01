@@ -6,7 +6,9 @@
     <title>Document</title>
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- fontes -->
+    <title>Panel administracyjny</title>
+
+    <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- bootstrap -->

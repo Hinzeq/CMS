@@ -1,12 +1,13 @@
 <?php
 
-class LogoutController extends Controller {
+class LogoutController {
 
     public function render() {
 
         session_start();
         $_SESSION['login'] = false;
-        require 'app/admin/views/login.php';
+        header("HTTP/1.1 301 Moved Permanently");
+        header("Location: http://localhost:8888/admin/login");
 
     }
 

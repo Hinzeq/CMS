@@ -48,6 +48,9 @@ class Router {
         if ($controller == 'IndexController') return new IndexController;
         else if ($controller == 'AddController') return new AddController;
         else if ($controller == 'LogoutController') return new LogoutController;
+        else if ($controller == 'LoginController') return new LoginController;
+        else if ($controller == 'EditController') return new EditController;
+        else if ($controller == 'DeleteController') return new DeleteController;
     }
 
 }
