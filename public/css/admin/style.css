@@ -1,0 +1,24 @@
+#header {
+    background: #333333;
+    color: #ffffff;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+#header span {
+    font-size: 2.5rem;
+}
+
+.form-area-style {
+    margin-bottom: 5px;
+}
+
+#login {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+}
