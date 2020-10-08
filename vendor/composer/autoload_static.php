@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInitfa46eba691a72d70c3d758c4e875b81e
 {
     public static $classMap = array (
+        'AddBlogController' => __DIR__ . '/../..' . '/app/admin/controllers/AddBlogController.php',
         'AddController' => __DIR__ . '/../..' . '/app/admin/controllers/AddController.php',
         'App' => __DIR__ . '/../..' . '/core/App.php',
         'ComposerAutoloaderInitfa46eba691a72d70c3d758c4e875b81e' => __DIR__ . '/..' . '/composer/autoload_real.php',
@@ -23,6 +24,7 @@ class ComposerStaticInitfa46eba691a72d70c3d758c4e875b81e
         'PagesModel' => __DIR__ . '/../..' . '/app/models/PagesModel.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'SettingsController' => __DIR__ . '/../..' . '/app/admin/controllers/SettingsController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

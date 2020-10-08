@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddBlogController' => $baseDir . '/app/admin/controllers/AddBlogController.php',
     'AddController' => $baseDir . '/app/admin/controllers/AddController.php',
     'App' => $baseDir . '/core/App.php',
     'ComposerAutoloaderInitfa46eba691a72d70c3d758c4e875b81e' => $vendorDir . '/composer/autoload_real.php',
@@ -22,4 +23,5 @@ return array(
     'PagesModel' => $baseDir . '/app/models/PagesModel.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Router' => $baseDir . '/core/Router.php',
+    'SettingsController' => $baseDir . '/app/admin/controllers/SettingsController.php',
 );

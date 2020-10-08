@@ -4,27 +4,22 @@
             <div class="row">
                 <form action="">
                     <div class="modal-header">
-                        <h4>Edytuj stronę</h4>
+                        <h4>Dodaj post</h4>
                     </div>
 
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for=""><b>Przyjazny adres url:</b></label>
-                            <input type="text" class="form-control" placeholder="Nazwa strony">
+                            <label for=""><b>Tytuł wpisu:</b></label>
+                            <input type="text" class="form-control" placeholder="Tytuł wpisy na bloga...">
                         </div>
                         <hr/>
                         <div class="form-group">
-                            <label for=""><b>Sekcja head:</b></label>
-                            <input type="text" class="form-control form-area-style" placeholder="Meta tytuł">
-                            <input type="text" class="form-control form-area-style" placeholder="Meta opis">
-                            <input type="text" class="form-control form-area-style" placeholder="Słowa kluczowe">
-                            <input type="text" class="form-control form-area-style" placeholder="Canonical adres">
-                        </div>
-                        <hr/>
-                        <div class="form-group">
-                            <label for=""><b>Opis strony:</b></label>
+                            <label for=""><b>Treść wpisu:</b></label>
                             <textarea name="editor1" class="form-control"></textarea>
                         </div>
+                        <hr/>
+                        <label for=""><b>Zdjęcie wyróżniające:</b></label><br/>
+                        <input type="file" name="" id="">
                         <hr/>
                         <div class="checkbox">
                             <label for="">
@@ -43,7 +38,7 @@
         </div>
 
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
-
-        <script>
+        
+    <script>
         CKEDITOR.replace( 'editor1' );
     </script>

@@ -2,11 +2,6 @@
 
 class PagesModel {
 
-    // public static function query() {
-    //     $QueryBuilder = new QueryBuilder(App::get('db_connect'));
-    //     return $QueryBuilder->selectAll('todos');
-    // }
-
     public static function nav() {
         $QueryBuilder = new QueryBuilder(App::get('db_connect'));
         return $QueryBuilder->selectAll('pages');
@@ -16,5 +11,10 @@ class PagesModel {
         $QueryBuilder = new QueryBuilder(App::get('db_connect'));
         return $QueryBuilder->select('pages', 'full_name', $name);
     }
+
+    // public static function nav() {
+    //     $QueryBuilder = new QueryBuilder(App::get('db_connect'));
+    //     return $QueryBuilder->selectAll('strony');
+    // }
 
 }

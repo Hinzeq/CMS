@@ -11,13 +11,19 @@
                 <div class="container-fluid">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/admin/add" class="nav-link">Dodaj</a>
+                        <a href="/admin/add" class="nav-link">Dodaj stronę</a>
                     </li>
                     <li>
                         <a href="/admin/edit" class="nav-link">Edytuj</a>
                     </li>
                     <li>
+                        <a href="/admin/add_blog" class="nav-link">Dodaj wpis</a>
+                    </li>
+                    <li>
                         <a href="/admin/delete" class="nav-link">Usuń</a>
+                    </li>
+                    <li>
+                        <a href="/admin/settings" class="nav-link">Ustawienia</a>
                     </li>
                 </ul>
 

@@ -51,6 +51,8 @@ class Router {
         else if ($controller == 'LoginController') return new LoginController;
         else if ($controller == 'EditController') return new EditController;
         else if ($controller == 'DeleteController') return new DeleteController;
+        else if ($controller == 'AddBlogController') return new AddBlogController;
+        else if ($controller == 'SettingsController') return new SettingsController;
     }
 
 }
