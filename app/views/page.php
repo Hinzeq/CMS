@@ -1,11 +1,11 @@
 <?php require('partials/header.php'); ?>
 
     <div class="jumbotron text-center">
-    <h1><?= $page['nav_name']; ?></h1>
+    <h1><?= $page['name']; ?></h1>
         <p>paragraf - jakiś losowy tekst</p>
     </div>
 
-    <div class="container-top">
+    <!-- <div class="container-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -24,15 +24,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="container-photo">
+    <!-- <div class="container-photo">
         <div class="container">
             <div class="row">
                 <p>testtest</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container container-content">
         <div class="row">

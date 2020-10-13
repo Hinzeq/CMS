@@ -1,8 +1,7 @@
 <?php
 
-class AddModel {
+class EditModel {
 
-    // sprawdza czy wszystkie wymagane wartości są podane (istnieją i nie są puste)
     public static function checkIsset() {
         if(isset($_POST['url']) && $_POST['url'] != "" &&
             isset($_POST['name']) && $_POST['name'] != "" &&
@@ -14,7 +13,13 @@ class AddModel {
         }
     }
 
-    public static function insert() {
+    public static function get($url) {
+        $QueryBuilder = new QueryBuilder(App::get('db_connect'));
+        if($_GET['url'] == "") $url = "";
+        return $QueryBuilder->select('strony', 'url', $url);
+    }
+
+    public static function update() {
 
         $QueryBuilder = new QueryBuilder(App::get('db_connect'));
 
@@ -33,7 +38,7 @@ class AddModel {
         }
 
         
-        $QueryBuilder->insert('strony', [
+        $QueryBuilder->update('strony', [
             'url' => $_POST['url'],
             'name' => $_POST['name'],
             'meta_title' => $_POST['meta_title'],
@@ -43,9 +48,11 @@ class AddModel {
             'content' => $_POST['content'],
             'meta_index' => $_POST['meta_index'],
             'meta_follow' => $_POST['meta_follow']
-        ]);
+        ],
+        $_GET['url']);
 
-        $_SESSION['message'] = "Dodano stronę";
+        header("HTTP/1.1 301 Moved Permanently");
+        header("Location: http://localhost:8888/admin");
         
     }
 

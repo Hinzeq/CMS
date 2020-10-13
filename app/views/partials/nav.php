@@ -11,7 +11,7 @@
 
                     <?php foreach($nav as $part) : ?>
                         <li class="nav-item action">
-                            <a class="nav-link" href="<?= $part->name; ?>"><?= $part->nav_name; ?></a>
+                            <a class="nav-link" href="<?= $part->url; ?>"><?= $part->name; ?></a>
                         </li>
                     <?php endforeach; ?>
 

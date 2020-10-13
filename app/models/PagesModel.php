@@ -2,19 +2,24 @@
 
 class PagesModel {
 
+    // public static function nav() {
+    //     $QueryBuilder = new QueryBuilder(App::get('db_connect'));
+    //     return $QueryBuilder->selectAll('pages');
+    // }
+
+    // public static function page($name) {
+    //     $QueryBuilder = new QueryBuilder(App::get('db_connect'));
+    //     return $QueryBuilder->select('pages', 'full_name', $name);
+    // }
+
     public static function nav() {
         $QueryBuilder = new QueryBuilder(App::get('db_connect'));
-        return $QueryBuilder->selectAll('pages');
+        return $QueryBuilder->selectAll('strony');
     }
 
     public static function page($name) {
         $QueryBuilder = new QueryBuilder(App::get('db_connect'));
-        return $QueryBuilder->select('pages', 'full_name', $name);
+        return $QueryBuilder->select('strony', 'id', $name);
     }
-
-    // public static function nav() {
-    //     $QueryBuilder = new QueryBuilder(App::get('db_connect'));
-    //     return $QueryBuilder->selectAll('strony');
-    // }
 
 }

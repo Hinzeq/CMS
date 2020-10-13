@@ -1,9 +1,9 @@
 <?php
 
 $QueryBuilder = new QueryBuilder(App::get('db_connect'));
-$query = $QueryBuilder->selectAll('pages');
+$query = $QueryBuilder->selectAll('strony');
 
 foreach ($query as $rout) {
-    $router[$rout->name] = $rout->full_name; // weź po id
+    $router[$rout->url] = $rout->id; 
 }
 return $router;

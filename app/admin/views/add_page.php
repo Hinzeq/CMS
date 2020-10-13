@@ -2,6 +2,7 @@
 
 <div class="container justify-content-center d-flex">
             <div class="row">
+            <p><?php if(isset($_SESSION['message'])) echo $_SESSION['message']; ?></p>
                 <form action="/admin/add" method="POST">
                     <div class="modal-header">
                         <h4>Dodaj stronę</h4>
@@ -9,8 +10,9 @@
 
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for=""><b>Przyjazny adres url:</b> <sub>pole wymagane</sub></label>
-                            <input type="text" class="form-control" placeholder="Nazwa strony" name="url">
+                            <label for=""><b>Nazwa strony:</b> <sub>pole wymagane</sub></label>
+                            <input type="text" class="form-control" placeholder="Nazwa strony" name="name">
+                            <input type="text" class="form-control" placeholder='Adres url (adres po "/")' name="url">
                         </div>
                         <hr/>
                         <div class="form-group">
@@ -23,7 +25,7 @@
                         <hr/>
                         <div class="form-group">
                             <label for=""><b>Opis strony:</b> <sub>pole wymagane</sub></label>
-                            <textarea name="tekst" class="form-control"></textarea>
+                            <textarea name="content" class="form-control"></textarea>
                         </div>
                         <hr/>
                         <div class="checkbox">
@@ -45,5 +47,5 @@
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
 
         <script>
-        CKEDITOR.replace( 'tekst' );
+        CKEDITOR.replace( 'content' );
     </script>

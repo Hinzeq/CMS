@@ -16,6 +16,12 @@ class Router {
             if(array_key_exists($uri, $this->admin_router)) {
                 $this->exist = true;
 
+                // przekierowuje do edycji wpisu, ignorując url
+                if(strstr($_SERVER['REQUEST_URI'], '?url=')) {
+                    $controller = new EditController;
+                    return $controller->render();
+                }
+
                 $controller = $this->set($this->admin_router[$uri]);
                 
                 return $controller->render();
@@ -30,7 +36,7 @@ class Router {
                 $this->exist = true;
 
                 $controller = new PagesController;
-
+                
                 return $controller->render($this->routes[$uri]);
             }
         }

@@ -36,4 +36,21 @@ class QueryBuilder {
         }
     }
 
+    public function update($table, $parameters, $id) {
+
+        $sql = "UPDATE $table SET ";
+        foreach($parameters as $key => $param) {
+            $sql = $sql.$key."='".$param."',";
+        }
+        $sql = rtrim($sql, ",").' WHERE url="'.$id.'"';
+
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute($parameters);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
 }
