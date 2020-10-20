@@ -44,13 +44,17 @@ class QueryBuilder {
         }
         $sql = rtrim($sql, ",").' WHERE url="'.$id.'"';
 
-
         try {
             $statement = $this->pdo->prepare($sql);
             $statement->execute($parameters);
         } catch (PDOException $e) {
             die($e->getMessage());
         }
+    }
+
+    public function delete($table, $where, $item) {
+        $statement = $this->pdo->prepare("DELETE FROM $table WHERE $where='{$item}'");
+        $statement->execute();
     }
 
 }

@@ -1,6 +1,6 @@
 <?php require('partials/header.php'); ?>
-<?php dd($edit['name']); ?>
-<div class="container justify-content-center d-flex">
+
+        <div class="container justify-content-center d-flex">
             <div class="row">
                 <form action="/admin/edit?url=<?= $edit['url']?>" method="POST">
                     <div class="modal-header">
@@ -10,7 +10,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for=""><b>Nazwa strony:</b> <sub>pole wymagane</sub></label>
-                            <input type="text" class="form-control form-area-style" placeholder="Nazwa strony" name="name" <?php if(isset($edit['name'])) echo "value='".$edit['name']."'"; ?>>
+                            <input type="text" class="form-control form-area-style" <?php if($_GET['url'] == "") echo 'disabled'; ?>  placeholder="Nazwa strony" name="name" <?php if(isset($edit['name'])) echo "value='".$edit['name']."'"; ?>>
                             <input type="text" class="form-control form-area-style" <?php if($_GET['url'] == "") echo 'disabled'; ?> name="url" <?php if(isset($edit['url'])) echo "value=".$edit['url']; ?>>
                         </div>
                         <hr/>
@@ -46,5 +46,8 @@
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
 
         <script>
-        CKEDITOR.replace( 'content' );
-    </script>
+            CKEDITOR.replace( 'content' );
+        </script>
+
+</body>
+</html>

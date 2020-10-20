@@ -1,8 +1,7 @@
 <?php require('partials/header.php'); ?>
 
-<div class="container justify-content-center d-flex">
+        <div class="container justify-content-center d-flex">
             <div class="row">
-            <p><?php if(isset($_SESSION['message'])) echo $_SESSION['message']; ?></p>
                 <form action="/admin/add" method="POST">
                     <div class="modal-header">
                         <h4>Dodaj stronę</h4>
@@ -47,5 +46,8 @@
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
 
         <script>
-        CKEDITOR.replace( 'content' );
-    </script>
+            CKEDITOR.replace( 'content' );
+        </script>
+
+</body>
+</html>

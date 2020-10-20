@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitfa46eba691a72d70c3d758c4e875b81e
 {
     public static $classMap = array (
-        'AddBlogController' => __DIR__ . '/../..' . '/app/admin/controllers/AddBlogController.php',
         'AddController' => __DIR__ . '/../..' . '/app/admin/controllers/AddController.php',
+        'AddModel' => __DIR__ . '/../..' . '/app/admin/models/AddModel.php',
         'App' => __DIR__ . '/../..' . '/core/App.php',
         'ComposerAutoloaderInitfa46eba691a72d70c3d758c4e875b81e' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
@@ -16,8 +16,11 @@ class ComposerStaticInitfa46eba691a72d70c3d758c4e875b81e
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'Controller' => __DIR__ . '/../..' . '/app/admin/controllers/Controller.php',
         'DeleteController' => __DIR__ . '/../..' . '/app/admin/controllers/DeleteController.php',
+        'DeleteModel' => __DIR__ . '/../..' . '/app/admin/models/DeleteModel.php',
         'EditController' => __DIR__ . '/../..' . '/app/admin/controllers/EditController.php',
+        'EditModel' => __DIR__ . '/../..' . '/app/admin/models/EditModel.php',
         'IndexController' => __DIR__ . '/../..' . '/app/admin/controllers/IndexController.php',
+        'IndexModel' => __DIR__ . '/../..' . '/app/admin/models/IndexModel.php',
         'LoginController' => __DIR__ . '/../..' . '/app/admin/controllers/LoginController.php',
         'LogoutController' => __DIR__ . '/../..' . '/app/admin/controllers/LogoutController.php',
         'PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',

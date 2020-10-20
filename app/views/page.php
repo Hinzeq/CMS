@@ -1,42 +1,41 @@
 <?php require('partials/header.php'); ?>
 
     <div class="jumbotron text-center">
-    <h1><?= $page['name']; ?></h1>
-        <p>paragraf - jakiś losowy tekst</p>
+        <h1><?= $page['name']; ?></h1>
+    </div>
+<?php
+    if($_SERVER['REQUEST_URI'] == '/') {
+        echo '<div class="container-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="top-content">
+                        <a href="http://localhost:8888/o-mnie">
+                            <h2>O mnie</h2>
+                            <p>Zapoznaj się z podstawowymi informacjami o mnie. Kim jestem, co lubię robić, czego oczekuję od życia.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="top-content">
+                        <a href="http://localhost:8888/informacje-o-stronie">
+                            <h2>O stronie</h2>
+                            <p>Jest to prosty system CMS oparty na wzorcu projektowym MVC napisanym w PHP. Więcej informacji znajdziesz tutaj...</p>
+                        </a>        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- <div class="container-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="left-top-content">
-                        <h2>About</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</p>
-                    </div>
-                </div>
-
-                <div class="col-md-8">
-                    <div class="right-top-content">
-                        <h2>Title heading</h2>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container-photo">
-        <div class="container">
-            <div class="row">
-                <p>testtest</p>
-            </div>
-        </div>
-    </div> -->
+    <div class="gradient text-center"></div>';
+    }
+?>
 
     <div class="container container-content">
         <div class="row">
-            <p><?= $page['content']; ?></p>
+            <span><?= $page['content']; ?></span>
         </div>
     </div>
 

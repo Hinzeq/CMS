@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddBlogController' => $baseDir . '/app/admin/controllers/AddBlogController.php',
     'AddController' => $baseDir . '/app/admin/controllers/AddController.php',
+    'AddModel' => $baseDir . '/app/admin/models/AddModel.php',
     'App' => $baseDir . '/core/App.php',
     'ComposerAutoloaderInitfa46eba691a72d70c3d758c4e875b81e' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
@@ -15,8 +15,11 @@ return array(
     'Connection' => $baseDir . '/core/database/Connection.php',
     'Controller' => $baseDir . '/app/admin/controllers/Controller.php',
     'DeleteController' => $baseDir . '/app/admin/controllers/DeleteController.php',
+    'DeleteModel' => $baseDir . '/app/admin/models/DeleteModel.php',
     'EditController' => $baseDir . '/app/admin/controllers/EditController.php',
+    'EditModel' => $baseDir . '/app/admin/models/EditModel.php',
     'IndexController' => $baseDir . '/app/admin/controllers/IndexController.php',
+    'IndexModel' => $baseDir . '/app/admin/models/IndexModel.php',
     'LoginController' => $baseDir . '/app/admin/controllers/LoginController.php',
     'LogoutController' => $baseDir . '/app/admin/controllers/LogoutController.php',
     'PagesController' => $baseDir . '/app/controllers/PagesController.php',

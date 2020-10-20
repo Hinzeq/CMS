@@ -1,5 +1,6 @@
 <?php
 
+// in this class I set parameters like arrays
 class App {
 
     protected static $initiation = [];

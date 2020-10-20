@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="robots" content="noindex, nofollow">
+    <title><?= $page['meta_title']; ?> - Wojciech Hinz</title>
+    <meta name="description" content="<?= $page['meta_desc']; ?>">
+    <meta name="robots" content="<?php echo $index.', '.$follow; ?>">
+    <link rel="canonical" href="<?= $myurl; ?>" />
+    
 
-    <!-- fontes -->
+    <!-- fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- bootstrap -->

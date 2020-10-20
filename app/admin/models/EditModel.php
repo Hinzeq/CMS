@@ -3,7 +3,12 @@
 class EditModel {
 
     public static function checkIsset() {
-        if(isset($_POST['url']) && $_POST['url'] != "" &&
+
+        if($_GET['url'] == '' && 
+            isset($_POST['content']) && $_POST['content'] != "") {
+                return true;
+            }
+        else if(isset($_POST['url']) && $_POST['url'] != "" &&
             isset($_POST['name']) && $_POST['name'] != "" &&
             isset($_POST['content']) && $_POST['content'] != "") {
                 return true;
@@ -14,30 +19,35 @@ class EditModel {
     }
 
     public static function get($url) {
-        $QueryBuilder = new QueryBuilder(App::get('db_connect'));
-        if($_GET['url'] == "") $url = "";
+        $QueryBuilder = new QueryBuilder(App::get('db_connect'));        
         return $QueryBuilder->select('strony', 'url', $url);
     }
 
-    public static function update() {
+    public static function update($url) {
 
         $QueryBuilder = new QueryBuilder(App::get('db_connect'));
 
-        // sprawdza czy checbkox on
+        // check checbkox on
         if(isset($_POST['meta_index'])) {
             $_POST['meta_index'] = true;
         } else {
             $_POST['meta_index'] = false;
         }
-
-        // sprawdza czy checbkox on
+        
+        // check checbkox on
         if(isset($_POST['meta_follow'])) {
             $_POST['meta_follow'] = true;
         } else {
             $_POST['meta_follow'] = false;
         }
-
         
+        // protected Home page from incorrect data
+        if($_GET['url'] == "") {
+            $url = "";
+            $_POST['url'] = "";
+            $_POST['name'] = "Główna";
+        } 
+
         $QueryBuilder->update('strony', [
             'url' => $_POST['url'],
             'name' => $_POST['name'],
@@ -49,7 +59,7 @@ class EditModel {
             'meta_index' => $_POST['meta_index'],
             'meta_follow' => $_POST['meta_follow']
         ],
-        $_GET['url']);
+        $url);
 
         header("HTTP/1.1 301 Moved Permanently");
         header("Location: http://localhost:8888/admin");

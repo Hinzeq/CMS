@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php'; // composer dump-autoload
+require 'vendor/autoload.php'; 
 require 'core/bootstrap.php';
 
 $router->direct(App::get('uri'));

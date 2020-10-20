@@ -1,5 +1,6 @@
 <?php
 
+// I am using this function to check a variable
 function dd($v) {
     echo '<pre>';
     var_dump($v);
